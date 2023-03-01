@@ -17,16 +17,17 @@ const galleryEl = document.querySelector('.gallery');
 galleryEl.style.display = 'flex';
 galleryEl.style.gap = "5px";
 
-const imageOnPage = images.map(({url, alt}) => {
-  const listEl = document.createElement('li');
+const imageOnPage = images.map(({ url, alt }) => { 
+  return `<li><img src="${url}" alt="${alt}" width="320px"></li>`;
 
-  const imgEl = document.createElement('img');
-  imgEl.src = url;
-  imgEl.alt = alt;
-  imgEl.width = 320;
-  listEl.appendChild(imgEl);
+  // const listEl = document.createElement('li');
 
-  return listEl.outerHTML;
+  // const imgEl = document.createElement('img');
+  // imgEl.src = url;
+  // imgEl.alt = alt;
+  // listEl.appendChild(imgEl);
+
+  // return listEl.outerHTML;
 }).join('');
 
 galleryEl.insertAdjacentHTML('afterbegin', imageOnPage);
