@@ -17,7 +17,7 @@ function createlist () {
   let baseEL = [];
 
   if (value !== 0) {
-    for (let i = 0; i <= value; i += 1) {
+    for (let i = 0; i < value; i += 1) {
       const color = getRandomHexColor();
       const element = constructor(i, color);
       baseEL.push(element);

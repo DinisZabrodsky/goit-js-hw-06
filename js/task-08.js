@@ -23,6 +23,11 @@ function onFormSubmit (event) {
         });
 
         savePassword.push(newUser);
+        console.log(newUser);
+        console.log(savePassword);
+
+        event.currentTarget.reset();
+
     };
 };
 
